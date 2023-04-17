@@ -2,6 +2,14 @@
 export default {
   content: ["*"],
   theme: {
+    screens: {
+      xsm: "482px",
+      sm: "640px",
+      md: "770px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       colors: {
         red: {
@@ -14,6 +22,9 @@ export default {
           250: "#e0e1dd",
           350: "#697c6b",
           750: "#252c26",
+        },
+        cyan: {
+          930: "#22505f",
         },
       },
       fontFamily: {
