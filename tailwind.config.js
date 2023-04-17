@@ -11,6 +11,12 @@ export default {
       "2xl": "1536px",
     },
     extend: {
+      letterSpacing: {
+        tightest: "-0.07em",
+      },
+      fontWeight: {
+        mediumbold: "550",
+      },
       colors: {
         red: {
           850: "#9a1a28",
