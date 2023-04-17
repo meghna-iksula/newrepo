@@ -1,0 +1,10 @@
+nav bar bg color #e0e1dd (zinc-250)
+text color #252c26 (zinc-750)
+header color #a9b089 (moss-default)
+Ad bg color #9a1a28 (red-850)
+footer bg color #252c26 (zinc-750)
+menu square color #697c6b (zinc-350)
+star rating (emerald-400)
+
+    
+font-family: 'Roboto','Roboto', Helvetica, Arial, sans-serif;
