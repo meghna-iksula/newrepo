@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
   .nav-list-item {
-    @apply pt-6 pb-3 px-3 mx-1 hover:border-b-[3px] hover:border-zinc-750;
+    @apply uppercase text-zinc-750 text-[15px] font-medium pt-[22px] pb-3 px-3 mx-1 hover:border-b-[3px] hover:border-zinc-750 tracking-wider;
   }
 }
