@@ -5,7 +5,13 @@
 @tailwind utilities;
 
 @layer components {
+  h6 {
+    @apply text-[14px] font-mediumbold tracking-tighter;
+  }
   .nav-list-item {
     @apply uppercase text-zinc-750 text-[15px] font-medium pt-[22px] pb-3 px-3 mx-1 hover:border-b-[3px] hover:border-zinc-750 tracking-wider;
+  }
+  .checkbox-input {
+    @apply ml-2 mr-1;
   }
 }

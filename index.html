@@ -13,7 +13,9 @@
     <script type="module" src="/main.js"></script>
     <title>CLEARANCE | SAVE UPTO 75%</title>
   </head>
-  <body class="font-roboto proportional-nums">
+  <body
+    class="font-roboto selection:bg-[rgba(34,80,95,.5)] selection:text-white"
+  >
     <!-- Top Banner -->
     <section class="bg-zinc-750 text-white w-full flex-col py-[10px]">
       <div
@@ -21,15 +23,16 @@
       >
         spring clearance | up to 75% off
       </div>
-      <div class="uppercase text-center text-[13px] tracking-tighter">
-        <a href="#" class="underline hover:text-zinc-300">shop now</a>
+      <div class="uppercase text-center text-[13px]">
+        new markdowns added |
+        <a href="#" class="underline hover:text-zinc-300"> shop now</a>
       </div>
     </section>
 
     <!-- Header -->
     <header class="text-zinc-750 bg-moss-default h-[146px]">
       <!-- Container above logo -->
-      <div class="hidden md:flex justify-between mx-6">
+      <div class="hidden md:flex justify-between mx-5">
         <div class="flex items-end">
           <span
             ><img
@@ -165,7 +168,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center justify-center mx-6">
+      <div class="relative flex items-center justify-center mx-5">
         <!-- Main Logo -->
         <div>
           <a class="logo" href="#" title="The Irish Store">
@@ -192,7 +195,7 @@
                 class="py-[6px] pl-[35px] pr-[28px] w-[240px] focus:outline-none text-[13px]"
               />
               <span class="absolute right-0 py-1 pr-[10px]"
-                ><button type="submit">
+                ><button type="submit" title="Search">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -224,8 +227,8 @@
     </header>
 
     <!-- Navigation block -->
-    <div class="hidden md:block">
-      <nav class="bg-zinc-250">
+    <div class="hidden md:block bg-zinc-250">
+      <nav class="mx-5">
         <ul class="flex justify-center">
           <li class="nav-list-item border-b-[3px] border-zinc-750">
             <a href="#">women</a>
@@ -254,7 +257,801 @@
         </ul>
       </nav>
     </div>
-    <section class="h-56"></section>
+
+    <!-- breadcrums -->
+    <div>
+      <ul class="flex items-center mx-5 py-3 font-normal text-sm">
+        <li class="pr-2 capitalize cursor-pointer">home</li>
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1"
+            stroke="currentColor"
+            class="w-4 h-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </span>
+        <li class="px-2 capitalize cursor-pointer">new arrivals</li>
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1"
+            stroke="currentColor"
+            class="w-4 h-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </span>
+        <li class="px-2 capitalize text-zinc-350 cursor-pointer">
+          new women's clothing
+        </li>
+      </ul>
+    </div>
+
+    <!-- main section -->
+    <section class="mx-5">
+      <div>
+        <h2 class="capitalize text-[22px]">new women's clothing</h2>
+      </div>
+      <div class="flex">
+        <aside class="min-w-max w-[295px] text-[14px] capitalize mr-12">
+          <h6 class="py-4 border-b border-zinc-300">shopping options</h6>
+          <div>
+            <ul>
+              <li
+                class="relative py-2 border-b border-zinc-300"
+                x-data="{open:false}"
+              >
+                price
+                <span
+                  class="absolute inline-flex justify-end right-3 pt-[3px] w-full"
+                  @click="open=!open"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                    :class="open && 'rotate-180'"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+                <span x-show="open">
+                  <ul class="pt-1 text-zinc-350">
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="price-range1"
+                      />
+                      <label for="price-range1">$0.00 - $50.00</label>
+                    </li>
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="price-range2"
+                      />
+                      <label for="price-range2">$50.00 - $100.00</label>
+                    </li>
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="price-range3"
+                      />
+                      <label for="price-range3">$100.00 - $150.00</label>
+                    </li>
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="price-range4"
+                      />
+                      <label for="price-range4">$150.00 - $200.00</label>
+                    </li>
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="price-range5"
+                      />
+                      <label for="price-range5">$200.00 - $250.00</label>
+                    </li>
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="price-range6"
+                      />
+                      <label for="price-range6">$250.00 - $350.00</label>
+                    </li>
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="price-range7"
+                      />
+                      <label for="price-range7">$300.00 and above</label>
+                    </li>
+                  </ul>
+                </span>
+              </li>
+              <li class="relative py-2 border-b border-zinc-300">
+                size
+                <span
+                  class="absolute inline-flex justify-end right-3 pt-[3px] w-full"
+                  @click="open=!open"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </li>
+              <div></div>
+              <li class="relative py-2 border-b border-zinc-300">
+                color
+                <span
+                  class="absolute inline-flex justify-end right-3 pt-[3px] w-full"
+                  @click="open=!open"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </li>
+              <div></div>
+              <li
+                class="relative py-2 border-b border-zinc-300"
+                x-data="{open:false}"
+              >
+                gender
+                <span
+                  class="absolute inline-flex justify-end right-3 pt-[3px] w-full"
+                  @click="open=!open"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+                <span x-show="open">
+                  <ul class="pt-1 text-zinc-350">
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="gender1"
+                      />
+                      <label for="gender1">Female</label>
+                    </li>
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="gender2"
+                      />
+                      <label for="gender1">Male</label>
+                    </li>
+                    <li class="py-1">
+                      <input
+                        class="checkbox-input"
+                        type="checkbox"
+                        id="gender3"
+                      />
+                      <label for="gender1">Unisex</label>
+                    </li>
+                  </ul>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <section class="w-full">
+          <div class="border-t border-zinc-300 py-2">top sorting div</div>
+          <div class="grid grid-cols-3 grid-flow-row-dense gap-5">
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product1.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Cushendall Cropped Aran Cardigan</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/save.png"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product2.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">Irish Wool Country Walking Cape - Navy</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product3.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Leenane Aran Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product4.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Banna Aran Cardigan</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product5.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">McConnell Fermoy Aran Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product6.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Kerrykeel Aran Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product7.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Dereen Aran Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product8.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">McConnell Mizen Aran Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img src="./assets/products/product9.jpg" alt="Product image" />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Grafton Cable Cape</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product10.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Derrynane Diamond Aran Cardigan</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product11.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">Women's Plaid Flannel Shirt</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product12.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">Classic Irish Shirt</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product13.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">McConnell Bantry Poncho</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product14.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">McConnell Breton Stripe Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product15.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Dungloe Donegal Tweed Cape</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product16.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Mc Connell Goleen Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product17.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">McConnell Barleycove Aran Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product18.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">McConnell Garnish Tweed Coat</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product19.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">Women's Cotton Flannel Nightshirt</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product20.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">Women's Tartan Flannel Lounge Pants</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product21.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">The Mullaghmore Aran Gilet</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product22.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">Mucros Irish Wool Half Zip Poncho</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product23.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">McConnell Shangarry Aran Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute top-5 right-3">
+                <img
+                  src="./assets/products/new.webp"
+                  alt="new product"
+                  width="64px"
+                />
+              </div>
+              <div>
+                <img
+                  src="./assets/products/product24.jpg"
+                  alt="Product image"
+                />
+              </div>
+              <div class="text-[14px]">
+                <h6 class="py-2">McConnell Shangarry Aran Sweater</h6>
+                <span>price</span>
+                <div>reviews</div>
+                <div class="flex">
+                  <div>green</div>
+                  <div>yellow</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
     <section class="h-56 bg-zinc-250"></section>
     <footer class="text-white bg-zinc-750 h-44 mb-10"></footer>
   </body>
