@@ -21,9 +21,3 @@
     @apply w-[32px] mr-[5px] mb-[5px] p-[1px] hover:ring-2 ring-zinc-750 cursor-pointer;
   }
 }
-
-@layer utilities {
-  .container {
-    @apply mx-5 2xl:mx-auto max-w-[1280px];
-  }
-}
