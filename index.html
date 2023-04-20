@@ -317,7 +317,7 @@
         <h2 class="capitalize text-[22px]">new women's clothing</h2>
       </div>
       <div class="flex">
-        <aside class="w-[258px] text-[14px] capitalize pr-[2%]">
+        <aside class="w-[295px] text-[14px] capitalize pr-[2%]">
           <h6 class="py-3 border-b border-zinc-300">shopping options</h6>
           <div>
             <ul>
@@ -347,7 +347,7 @@
                 </span>
                 <span x-show="open">
                   <ul class="pt-1 text-zinc-350">
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -355,7 +355,7 @@
                       />
                       <label for="price-range1">$0.00 - $50.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -363,7 +363,7 @@
                       />
                       <label for="price-range2">$50.00 - $100.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -371,7 +371,7 @@
                       />
                       <label for="price-range3">$100.00 - $150.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -379,7 +379,7 @@
                       />
                       <label for="price-range4">$150.00 - $200.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -387,7 +387,7 @@
                       />
                       <label for="price-range5">$200.00 - $250.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -395,7 +395,7 @@
                       />
                       <label for="price-range6">$250.00 - $350.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -406,7 +406,10 @@
                   </ul>
                 </span>
               </li>
-              <li class="relative py-[10px] border-b border-zinc-300">
+              <li
+                class="relative py-[10px] border-b border-zinc-300"
+                x-data="{open:false}"
+              >
                 size
                 <span
                   class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
@@ -418,6 +421,7 @@
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
+                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -426,9 +430,24 @@
                     />
                   </svg>
                 </span>
+                <span x-show="open" class="flex flex-wrap pt-2">
+                  <div class="size-unit">One Size Only</div>
+                  <div class="size-unit">XS</div>
+                  <div class="size-unit">S</div>
+                  <div class="size-unit">S/M</div>
+                  <div class="size-unit">M</div>
+                  <div class="size-unit">M/L</div>
+                  <div class="size-unit">L</div>
+                  <div class="size-unit">XL</div>
+                  <div class="size-unit">XXL</div>
+                  <div class="size-unit">XXXL</div>
+                </span>
               </li>
-              <div></div>
-              <li class="relative py-[10px] border-b border-zinc-300">
+
+              <li
+                class="relative py-[10px] border-b border-zinc-300"
+                x-data="{open:false}"
+              >
                 color
                 <span
                   class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
@@ -440,6 +459,7 @@
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
+                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -448,8 +468,105 @@
                     />
                   </svg>
                 </span>
+                <span
+                  x-show="open"
+                  class="grid grid-cols-4 gap-1 grid-flow-row pt-2 w-fit"
+                >
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-1.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p3-1.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p3-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p4-1.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                </span>
               </li>
-              <div></div>
               <li
                 class="relative py-[10px] border-b border-zinc-300"
                 x-data="{open:false}"
@@ -475,7 +592,7 @@
                 </span>
                 <span x-show="open">
                   <ul class="pt-1 text-zinc-350">
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -483,7 +600,7 @@
                       />
                       <label for="gender1">Female</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -491,7 +608,7 @@
                       />
                       <label for="gender1">Male</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -506,8 +623,10 @@
           </div>
         </aside>
         <section class="w-full pb-[40px] pl-[2%]">
-          <div class="border-t border-zinc-300 py-2">top sorting div</div>
-          <div class="grid grid-cols-3 grid-flow-row gap-5">
+          <div class="border-t border-zinc-300 pt-[20px] mb-[30px]">
+            top sorting div
+          </div>
+          <div class="grid grid-cols-3 grid-flow-row gap-4 xl:gap-0">
             <!-- Product item 1-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
@@ -1501,7 +1620,303 @@
       </div>
     </section>
 
-    <section class="h-56 bg-zinc-250"></section>
-    <footer class="text-white bg-zinc-750 h-44 mb-10"></footer>
+    <footer>
+      <!-- top section -->
+      <section class="bg-zinc-250 text-zinc-750">
+        <div class="mx-5 2xl:mx-auto max-w-[1280px] pb-[25px]">
+          <!-- ships to info -->
+          <div class="flex items-center py-[25px]">
+            <span class="uppercase text-[11px] font-bold tracking-widest"
+              >ships to:</span
+            ><span class="px-2"
+              ><img
+                class="w-5 contrast-125"
+                src="./assets/united-states-of-america.png"
+                alt="united states flag"
+            /></span>
+            <span class="ml-1"
+              ><select
+                title="United States - USD"
+                class="uppercase w-[200px] text-[14px] bg-transparent font-bold tracking-widest cursor-pointer outline-none"
+              >
+                <option value="AM-AMD" class="capitalize">Armenia - AMD</option>
+                <option value="AU-AUD" class="capitalize">
+                  Australia - AUD
+                </option>
+                <option value="AT-EUR" class="capitalize">Austria - EUR</option>
+                <option value="BE-EUR" class="capitalize">Belgium - EUR</option>
+                <option value="BG-BGN" class="capitalize">
+                  Bulgaria - BGN
+                </option>
+                <option value="CA-CAD" class="capitalize">Canada - CAD</option>
+                <option value="CO-COP" class="capitalize">
+                  Colombia - COP
+                </option>
+                <option value="HR-HRK" class="capitalize">Croatia - HRK</option>
+                <option value="CZ-CZK" class="capitalize">Czechia - CZK</option>
+                <option value="DK-DKK" class="capitalize">Denmark - DKK</option>
+                <option value="EE-EUR" class="capitalize">Estonia - EUR</option>
+                <option value="FI-EUR" class="capitalize">Finland - EUR</option>
+                <option value="FR-EUR" class="capitalize">France - EUR</option>
+                <option value="DE-EUR" class="capitalize">Germany - EUR</option>
+                <option value="GR-EUR" class="capitalize">Greece - EUR</option>
+                <option value="HK-HKD" class="capitalize">
+                  Hong Kong SAR China - HKD
+                </option>
+                <option value="IE-EUR" class="capitalize">Ireland - EUR</option>
+                <option value="IT-EUR" class="capitalize">Italy - EUR</option>
+                <option value="JP-JPY" class="capitalize">Japan - JPY</option>
+                <option value="LV-EUR" class="capitalize">Latvia - EUR</option>
+                <option value="LT-EUR" class="capitalize">
+                  Lithuania - EUR
+                </option>
+                <option value="LU-EUR" class="capitalize">
+                  Luxembourg - EUR
+                </option>
+                <option value="MY-MYR" class="capitalize">
+                  Malaysia - MYR
+                </option>
+                <option value="MX-MXN" class="capitalize">Mexico - MXN</option>
+                <option value="NL-EUR" class="capitalize">
+                  Netherlands - EUR
+                </option>
+                <option value="NZ-NZD" class="capitalize">
+                  New Zealand - NZD
+                </option>
+                <option value="NO-NOK" class="capitalize">Norway - NOK</option>
+                <option value="PL-PLN" class="capitalize">Poland - PLN</option>
+                <option value="PT-EUR" class="capitalize">
+                  Portugal - EUR
+                </option>
+                <option value="SG-SGD" class="capitalize">
+                  Singapore - SGD
+                </option>
+                <option value="SK-EUR" class="capitalize">
+                  Slovakia - EUR
+                </option>
+                <option value="SI-EUR" class="capitalize">
+                  Slovenia - EUR
+                </option>
+                <option value="KR-KRW" class="capitalize">
+                  South Korea - KRW
+                </option>
+                <option value="ES-EUR" class="capitalize">Spain - EUR</option>
+                <option value="SE-SEK" class="capitalize">Sweden - SEK</option>
+                <option value="CH-CHF" class="capitalize">
+                  Switzerland - CHF
+                </option>
+                <option value="AE-AED" class="capitalize">
+                  United Arab Emirates - AED
+                </option>
+                <option value="GB-GBP" class="capitalize">
+                  United Kingdom - GBP
+                </option>
+                <option value="US-USD" class="capitalize" selected>
+                  United States - USD
+                </option>
+              </select></span
+            >
+          </div>
+          <!-- Subscribe form -->
+          <div>
+            <form action="" class="flex">
+              <div class="relative flex items-center bg-white">
+                <span class="px-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                    />
+                    <path
+                      d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                    />
+                  </svg>
+                </span>
+                <input
+                  type="email"
+                  placeholder="ENTER EMAIL"
+                  class="text-[14px] p-[6px] font-medium placeholder:text-zinc-750 placeholder:tracking-wider w-[200px]"
+                />
+              </div>
+              <button
+                type="submit"
+                class="bg-cyan-930 text-white text-[14px] py-1 px-3 font-mediumbold tracking-wider"
+              >
+                SUBSCRIBE
+              </button>
+            </form>
+          </div>
+          <!-- text -->
+          <p class="text-red-850 font-semibold text-[18px] mt-[14px] mb-[7px]">
+            Sign Up & Save $10 Today
+          </p>
+          <!-- details section -->
+          <section
+            class="flex flex-col justify-between lg:flex-wrap-reverse 2lg:flex-nowrap 2lg:flex-row"
+          >
+            <div
+              class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row 2lg:w-2/3"
+            >
+              <div>
+                <h5 class="uppercase font-mediumbold mb-3">HOW CAN WE HELP?</h5>
+                <ul>
+                  <li class="footer-list-item">Help Center</li>
+                  <li class="footer-list-item">Order Tracking</li>
+                  <li class="footer-list-item">Contact Us</li>
+                  <li class="footer-list-item">Free Returns</li>
+                  <li class="footer-list-item">Delivery & Shipping</li>
+                  <li class="footer-list-item">Tax Information</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="uppercase font-mediumbold mb-3">ABOUT US</h5>
+                <ul>
+                  <li class="footer-list-item">Our Story</li>
+                  <li class="footer-list-item">Cookie Policy</li>
+                  <li class="footer-list-item">Privacy Policy</li>
+                  <li class="footer-list-item">Sitemap</li>
+                  <li class="footer-list-item">Terms & Conditions</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="uppercase font-mediumbold mb-3">
+                  USEFUL INFORMATION
+                </h5>
+                <ul>
+                  <li class="footer-list-item">Size Charts</li>
+                  <li class="footer-list-item">Blog</li>
+                  <li class="footer-list-item">Catalog</li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="uppercase font-mediumbold mb-3">POPULAR PRODUCTS</h5>
+                <ul>
+                  <li class="footer-list-item">Aran Sweaters</li>
+                  <li class="footer-list-item">Fishermen Sweaters</li>
+                  <li class="footer-list-item">Irish Jewelry</li>
+                  <li class="footer-list-item">Irish Gifts</li>
+                  <li class="footer-list-item">Claddagh Rings</li>
+                  <li class="footer-list-item">Celtic Clothing</li>
+                  <li class="footer-list-item">Irish Hats</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Reviews container -->
+            <div class="min-w-[230px] max-w-[280px] mt-[30px]">
+              <div class="flex pb-[12px]">
+                <div class="pr-2 h-[28px] cursor-pointer">
+                  <img
+                    src="./assets/social-media-icons/tis-icon-facebook.svg"
+                    alt="facebook icon"
+                  />
+                </div>
+                <div class="pr-2 h-[28px] cursor-pointer">
+                  <img
+                    src="./assets/social-media-icons/tis-icon-pinterest.svg"
+                    alt="Pinterest icon"
+                  />
+                </div>
+                <div class="pr-2 h-[28px] cursor-pointer">
+                  <img
+                    src="./assets/social-media-icons/tis-icon-linkedin.svg"
+                    alt="Linkedin icon"
+                  />
+                </div>
+                <div class="pr-2 h-[28px] cursor-pointer">
+                  <img
+                    src="./assets/social-media-icons/tis-icon-youtube.svg"
+                    alt="Youtube icon"
+                  />
+                </div>
+                <div class="pr-2 h-[28px] cursor-pointer">
+                  <img
+                    src="./assets/social-media-icons/tis-icon-instagram.svg"
+                    alt="Instagram icon"
+                  />
+                </div>
+                <div class="pr-2 h-[28px] cursor-pointer">
+                  <img
+                    src="./assets/social-media-icons/tis-icon-blog.svg"
+                    alt="Blog icon"
+                  />
+                </div>
+              </div>
+              <p class="pb-[12px] border-b border-zinc-750 text-[14px]">
+                To stay up to date with all our special offers and great new
+                Irish products
+              </p>
+              <div class="bg-emerald-400 text-white font-semibold h-20 my-4">
+                Trustpilot
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- bottom section -->
+      <section class="text-white bg-zinc-750 mb-11">
+        <div
+          class="mx-5 2xl:mx-auto max-w-[1280px] flex justify-between flex-wrap text-[14px]"
+        >
+          <div class="flex py-7">
+            <address class="pr-12">
+              <h5 class="uppercase font-mediumbold not-italic">
+                the irish store
+              </h5>
+              <p class="not-italic leading-6">
+                1st Floor<br />8-9 Westmoreland Street,<br />Dublin 2, Ireland
+              </p>
+            </address>
+            <div class="max-w-[300px]">
+              <p class="leading-6">
+                <span class="font-mediumbold uppercase">USA/CANADA: </span>
+                <a
+                  title="Call Us"
+                  href="tel:18007075037"
+                  class="hover:underline"
+                  >1800 707 5037 (toll free to Ireland)</a
+                >
+              </p>
+              <p class="leading-6">
+                <span class="font-mediumbold uppercase">International: </span
+                ><a
+                  title="Call Us"
+                  href="tel:+35318611590"
+                  class="hover:underline"
+                  >+353 1 8611590</a
+                >
+              </p>
+              <p class="leading-6">
+                <span class="font-mediumbold uppercase">email: </span>
+                <a
+                  title="Contact Us"
+                  href="mailto:info@theirishstore.com"
+                  class="hover:underline"
+                  >info@theirishstore.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="py-7">
+            <div class="flex items-center py-1">
+              <span class="font-mediumbold uppercase tracking-widest pt-1 pr-3"
+                >100% SECURE SHOPPING CART
+              </span>
+              <img src="./assets/comodo-source.webp" alt="comodo source" />
+            </div>
+            <div class="py-2">
+              <img
+                src="./assets/payment-options.webp"
+                alt="Payments options"
+                width="400px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

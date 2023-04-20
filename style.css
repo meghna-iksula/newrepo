@@ -14,10 +14,16 @@
   .checkbox-input {
     @apply ml-2 mr-1;
   }
+  .size-unit {
+    @apply py-1 min-w-[30px] px-3 text-[12px] mr-[6px] mb-[6px] font-medium text-gray-400 hover:text-zinc-750 bg-zinc-100 border border-zinc-300 hover:border-zinc-750 tracking-tighter cursor-pointer;
+  }
   .product-item {
     @apply scale-105 w-fit h-fit bg-white hover:shadow-[0_6px_12px_3px_rgb(0,0,0,0.3)] hover:z-50;
   }
   .product-thumbnail {
     @apply w-[32px] mr-[5px] mb-[5px] p-[1px] hover:ring-2 ring-zinc-750 cursor-pointer;
+  }
+  .footer-list-item {
+    @apply leading-6 text-[14px] hover:underline cursor-pointer;
   }
 }
