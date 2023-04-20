@@ -15,9 +15,15 @@
     @apply ml-2 mr-1;
   }
   .product-item {
-    @apply scale-105 h-fit hover:shadow-[0_6px_12px_3px_rgb(0,0,0,0.3)] hover:z-50;
+    @apply scale-105 w-fit h-fit bg-white hover:shadow-[0_6px_12px_3px_rgb(0,0,0,0.3)] hover:z-50;
   }
   .product-thumbnail {
     @apply w-[32px] mr-[5px] mb-[5px] p-[1px] hover:ring-2 ring-zinc-750 cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-5 2xl:mx-auto max-w-[1280px];
   }
 }
