@@ -347,7 +347,7 @@
                 </span>
                 <span x-show="open">
                   <ul class="pt-1 text-zinc-350">
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -355,7 +355,7 @@
                       />
                       <label for="price-range1">$0.00 - $50.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -363,7 +363,7 @@
                       />
                       <label for="price-range2">$50.00 - $100.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -371,7 +371,7 @@
                       />
                       <label for="price-range3">$100.00 - $150.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -379,7 +379,7 @@
                       />
                       <label for="price-range4">$150.00 - $200.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -387,7 +387,7 @@
                       />
                       <label for="price-range5">$200.00 - $250.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -395,7 +395,7 @@
                       />
                       <label for="price-range6">$250.00 - $350.00</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -406,7 +406,10 @@
                   </ul>
                 </span>
               </li>
-              <li class="relative py-[10px] border-b border-zinc-300">
+              <li
+                class="relative py-[10px] border-b border-zinc-300"
+                x-data="{open:false}"
+              >
                 size
                 <span
                   class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
@@ -426,8 +429,20 @@
                     />
                   </svg>
                 </span>
+                <span x-show="open" class="flex flex-wrap pt-2">
+                  <div class="size-unit">One Size Only</div>
+                  <div class="size-unit">XS</div>
+                  <div class="size-unit">S</div>
+                  <div class="size-unit">S/M</div>
+                  <div class="size-unit">M</div>
+                  <div class="size-unit">M/L</div>
+                  <div class="size-unit">L</div>
+                  <div class="size-unit">XL</div>
+                  <div class="size-unit">XXL</div>
+                  <div class="size-unit">XXXL</div>
+                </span>
               </li>
-              <div></div>
+
               <li class="relative py-[10px] border-b border-zinc-300">
                 color
                 <span
@@ -475,7 +490,7 @@
                 </span>
                 <span x-show="open">
                   <ul class="pt-1 text-zinc-350">
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -483,7 +498,7 @@
                       />
                       <label for="gender1">Female</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
@@ -491,7 +506,7 @@
                       />
                       <label for="gender1">Male</label>
                     </li>
-                    <li class="py-1">
+                    <li class="py-1 hover:bg-zinc-250">
                       <input
                         class="checkbox-input"
                         type="checkbox"
