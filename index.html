@@ -421,6 +421,7 @@
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
+                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -443,7 +444,10 @@
                 </span>
               </li>
 
-              <li class="relative py-[10px] border-b border-zinc-300">
+              <li
+                class="relative py-[10px] border-b border-zinc-300"
+                x-data="{open:false}"
+              >
                 color
                 <span
                   class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
@@ -455,6 +459,7 @@
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
+                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -463,8 +468,105 @@
                     />
                   </svg>
                 </span>
+                <span
+                  x-show="open"
+                  class="grid grid-cols-4 gap-1 grid-flow-row pt-2 w-fit"
+                >
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-1.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p3-1.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p3-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p4-1.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                  <div class="product-thumbnail w-9 h-6 overflow-hidden">
+                    <img src="./assets/products/p1-2.jpg" alt="Product color" />
+                  </div>
+                </span>
               </li>
-              <div></div>
               <li
                 class="relative py-[10px] border-b border-zinc-300"
                 x-data="{open:false}"
