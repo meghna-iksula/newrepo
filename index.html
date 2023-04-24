@@ -22,12 +22,12 @@
         class="text-white mx-5 2xl:mx-auto max-w-[1280px] flex-col py-[10px]"
       >
         <div
-          class="uppercase text-center text-[21.5px] pt-0.5 font-medium tracking-tighter leading-5"
+          class="uppercase text-center text-[13px] xsm:tracking-tighter xsm:text-[21.5px] pt-0.5 font-medium leading-5"
         >
           spring clearance | up to 75% off
         </div>
         <div
-          class="uppercase text-center text-[13px] font-mediumbold leading-4 mb-0.5"
+          class="uppercase text-center text-[11px] xsm:text-[13px] font-mediumbold leading-4 mb-0.5"
         >
           new products added |
           <a href="#" class="underline hover:text-zinc-300 font-normal">
@@ -38,8 +38,8 @@
     </section>
 
     <!-- Header -->
-    <header class="bg-moss-default h-[146px]">
-      <!-- Top mx-5 2xl:mx-auto max-w-[1280px] -->
+    <header class="bg-moss-default h-[146px] mb-[20px] md:mb-0">
+      <!-- Top container -->
       <div
         class="hidden md:flex justify-between mx-5 2xl:mx-auto max-w-[1280px]"
       >
@@ -246,7 +246,7 @@
       </div>
     </header>
 
-    <!-- Navigation side section -->
+    <!-- Navigation sidebar -->
     <!-- backdrop -->
     <div
       x-data
@@ -254,6 +254,7 @@
       @click="$store.Menu.toggleNav()"
       class="absolute md:hidden top-0 left-0 w-full h-full z-30"
     ></div>
+    <!-- navigation -->
     <section
       x-data
       :class="$store.Menu.navIsVisible? 'left-0': '-left-[100%]'"
@@ -515,7 +516,7 @@
     </div>
 
     <!-- breadcrums -->
-    <div>
+    <div class="hidden md:block">
       <ul
         class="flex items-center mx-5 2xl:mx-auto max-w-[1280px] pt-4 pb-3 font-normal text-sm"
       >
@@ -566,14 +567,17 @@
       </div>
       <div class="flex flex-col-reverse md:flex-row">
         <aside
-          class="absolute left-0 top-0 z-50 w-[80%] h-full bg-white transition-all duration-500 sm:relative sm:w-full md:w-[315px] text-[14px] capitalize md:pr-[2%]"
+          x-data
+          :class="$store.Menu.shoppingOptionsIsVisible? 'left-0': '-left-[100%]'"
+          class="fixed sm:relative sm:left-0 top-0 z-50 w-[80%] h-full bg-white transition-all duration-500 sm:w-full md:w-[315px] text-[14px] capitalize md:pr-[2%]"
         >
           <h6
-            class="relative text-[20px] font-normal sm:font-medium sm:text-[14.5px] pl-3 sm:pl-0 py-3 border-b border-zinc-300 shadow-sm shadow-zinc-400 sm:shadow-none"
+            class="relative text-[20px] font-normal sm:font-medium sm:text-[15px] pl-3 sm:pl-0 py-3 sm:pt-1 sm:pb-3 border-b border-zinc-300 shadow-sm shadow-zinc-400 sm:shadow-none leading-6"
           >
             shopping options
             <span
-              class="sm:hidden absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="$store.Menu.toggleShoppingOptions()"
+              class="sm:hidden absolute inline-flex justify-end right-2 pt-[3px] w-full cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -978,6 +982,7 @@
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
+                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -1019,35 +1024,109 @@
           </div>
         </aside>
         <section class="w-full pb-[40px] md:pl-[2%]">
-          <div class="border-t border-zinc-300 pt-[20px] mb-[30px]">
-            <div class="flex ring-1 ring-zinc-750 w-fit">
-              <!-- Grid mode -->
+          <div class="border-t border-zinc-300 sm:pt-[20px] mb-2 sm:mb-[30px]">
+            <!-- Wrapper -->
+            <div class="sm:hidden flex border-b border-zinc-300 mb-1">
               <div
-                class="grid grid-cols-3 gap-0.5 w-fit py-[7px] px-[10px] border-r border-zinc-750 cursor-pointer"
+                x-data
+                @click="$store.Menu.toggleShoppingOptions()"
+                class="w-1/2 text-center py-[7px] border-r border-inherit font-medium"
               >
-                <span class="bg-zinc-750 w-1 h-1"></span
-                ><span class="bg-zinc-750 w-1 h-1"></span
-                ><span class="bg-zinc-750 w-1 h-1"></span
-                ><span class="bg-zinc-750 w-1 h-1"></span
-                ><span class="bg-zinc-750 w-1 h-1"></span
-                ><span class="bg-zinc-750 w-1 h-1"></span
-                ><span class="bg-zinc-750 w-1 h-1"></span
-                ><span class="bg-zinc-750 w-1 h-1"></span
-                ><span class="bg-zinc-750 w-1 h-1"></span>
+                FILTER
               </div>
-              <!-- List mode -->
               <div
-                class="grid grid-cols-2 gap-0.5 w-fit py-[7px] px-[10px] cursor-pointer"
+                class="w-1/2 flex justify-center items-center py-[7px] font-medium"
               >
-                <span class="bg-gray-400 w-2 h-full row-span-2"></span
-                ><span class="bg-gray-400 w-2 h-[3px]"></span
-                ><span class="bg-gray-400 w-2 h-[3px]"></span
-                ><span class="bg-gray-400 w-2 h-full row-span-2"></span
-                ><span class="bg-gray-400 w-2 h-[3px]"></span
-                ><span class="bg-gray-400 w-2 h-[3px]"></span>
+                BESTSELLERS
+                <span class="inline-flex ml-1 cursor-pointer"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.3"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
               </div>
             </div>
-            <span>32 items</span>
+            <span class="sm:hidden text-[14px]">32 items</span>
+            <!-- wrapper -->
+            <div class="flex justify-between items-center">
+              <!-- left-side block -->
+
+              <!-- full block -->
+              <div class="hidden sm:flex items-center w-1/2">
+                <div class="hidden sm:flex ring-1 ring-zinc-750 w-fit">
+                  <!-- Grid mode -->
+                  <div
+                    class="grid grid-cols-3 gap-0.5 w-fit py-[7px] px-[10px] border-r border-zinc-750 cursor-pointer"
+                  >
+                    <span class="bg-zinc-750 w-1 h-1"></span
+                    ><span class="bg-zinc-750 w-1 h-1"></span
+                    ><span class="bg-zinc-750 w-1 h-1"></span
+                    ><span class="bg-zinc-750 w-1 h-1"></span
+                    ><span class="bg-zinc-750 w-1 h-1"></span
+                    ><span class="bg-zinc-750 w-1 h-1"></span
+                    ><span class="bg-zinc-750 w-1 h-1"></span
+                    ><span class="bg-zinc-750 w-1 h-1"></span
+                    ><span class="bg-zinc-750 w-1 h-1"></span>
+                  </div>
+                  <!-- List mode -->
+                  <div
+                    class="grid grid-cols-2 gap-0.5 w-fit py-[7px] px-[10px] cursor-pointer"
+                  >
+                    <span class="bg-gray-400 w-2 h-full row-span-2"></span
+                    ><span class="bg-gray-400 w-2 h-[3px]"></span
+                    ><span class="bg-gray-400 w-2 h-[3px]"></span
+                    ><span class="bg-gray-400 w-2 h-full row-span-2"></span
+                    ><span class="bg-gray-400 w-2 h-[3px]"></span
+                    ><span class="bg-gray-400 w-2 h-[3px]"></span>
+                  </div>
+                </div>
+                <span class="ml-5 text-[14px]">32 items</span>
+              </div>
+              <!-- right-side block -->
+
+              <div
+                class="hidden sm:flex items-center justify-end text-[14px] w-1/2"
+              >
+                <span class="mr-3">Sort By</span>
+                <div
+                  class="ring-1 ring-zinc-750 w-fit py-[7px] px-2 flex items-center leading-tight cursor-pointer"
+                >
+                  Bestsellers
+                  <span class="inline-flex ml-1 cursor-pointer"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <span class="ml-0.5"
+                  ><img
+                    src="./assets/arrow-top.png"
+                    alt="top arrow"
+                    class="w-6 h-4"
+                /></span>
+              </div>
+            </div>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-3 grid-flow-row gap-4">
             <!-- Product item 1-->
@@ -1057,7 +1136,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1099,7 +1178,7 @@
                   <img
                     src="./assets/products/save.png"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1130,7 +1209,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1172,7 +1251,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1214,7 +1293,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1256,7 +1335,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1298,7 +1377,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1349,7 +1428,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1385,7 +1464,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1427,7 +1506,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1469,7 +1548,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1523,7 +1602,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1565,7 +1644,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1607,7 +1686,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1649,7 +1728,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1685,7 +1764,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1727,7 +1806,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1769,7 +1848,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1805,7 +1884,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1847,7 +1926,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1889,7 +1968,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1934,7 +2013,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -1976,7 +2055,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -2015,7 +2094,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="44px"
+                    width="64px"
                   />
                 </div>
                 <div>
@@ -2050,7 +2129,7 @@
               </div>
             </div>
           </div>
-          <div class="pt-[20px] mb-[30px]">toolbar</div>
+          <div class="pt-[20px] mb-[30px]"></div>
         </section>
       </div>
     </section>
