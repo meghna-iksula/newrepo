@@ -14,7 +14,7 @@
     <title>New Women's Clothing - New Arrivals</title>
   </head>
   <body
-    class="font-roboto selection:bg-[rgba(34,80,95,.5)] selection:text-white"
+    class="relative font-roboto text-zinc-750 selection:bg-[rgba(34,80,95,.5)] selection:text-white"
   >
     <!-- Top Banner -->
     <section class="bg-zinc-750">
@@ -22,19 +22,23 @@
         class="text-white mx-5 2xl:mx-auto max-w-[1280px] flex-col py-[10px]"
       >
         <div
-          class="uppercase text-center text-[21px] font-mediumbold tracking-tighter leading-5"
+          class="uppercase text-center text-[21.5px] pt-0.5 font-medium tracking-tighter leading-5"
         >
           spring clearance | up to 75% off
         </div>
-        <div class="uppercase text-center text-[13px]">
-          new markdowns added |
-          <a href="#" class="underline hover:text-zinc-300"> shop now</a>
+        <div
+          class="uppercase text-center text-[13px] font-mediumbold leading-4 mb-0.5"
+        >
+          new products added |
+          <a href="#" class="underline hover:text-zinc-300 font-normal">
+            shop now</a
+          >
         </div>
       </div>
     </section>
 
     <!-- Header -->
-    <header class="text-zinc-750 bg-moss-default h-[146px]">
+    <header class="bg-moss-default h-[146px]">
       <!-- Top mx-5 2xl:mx-auto max-w-[1280px] -->
       <div
         class="hidden md:flex justify-between mx-5 2xl:mx-auto max-w-[1280px]"
@@ -46,8 +50,8 @@
               class="pr-2 pb-2"
               alt="tis icon globe"
           /></span>
-          <ul class="text-zinc-750 capitalize font-bold text-[16.5px]">
-            <li class="leading-7 tracking-tighter hover:underline">
+          <ul class="capitalize font-mediumbold text-[17.5px]">
+            <li class="leading-7 tracking-tighter hover:underline mb-[3px]">
               <a href="#" title="Delivery Information">track my order</a>
             </li>
             <li class="leading-7 tracking-tighter hover:underline">
@@ -57,7 +61,8 @@
         </div>
         <div class="flex h-fit">
           <div class="w-[360px] flex items-center">
-            <span class="uppercase text-[11px] font-bold tracking-widest"
+            <span
+              class="uppercase text-[11px] font-bold font-sans tracking-widest"
               >ships to:</span
             ><span class="px-2"
               ><img
@@ -177,6 +182,14 @@
       <div
         class="relative flex flex-col items-center justify-center mx-5 2xl:mx-auto max-w-[1280px]"
       >
+        <!-- Menu button -->
+        <span
+          x-data
+          class="absolute md:hidden left-0 top-[25px] text-white text-[13px] ring-2 ring-white p-0.5"
+          @click="$store.Menu.toggle()"
+        >
+          MENU
+        </span>
         <!-- Main Logo -->
         <div class="py-[20px] md:py-0">
           <a class="logo" href="#" title="The Irish Store">
@@ -201,7 +214,7 @@
                 class="py-[6px] pl-[35px] pr-[28px] w-full md:w-[240px] focus:outline-none text-[13px] placeholder:text-zinc-750 placeholder:font-mediumbold placeholder:tracking-wider"
               />
               <span
-                class="absolute left-0 md:right-0 py-1 pl-[10px] md:pr-[10px]"
+                class="absolute left-0 md:left-[205px] py-1 pl-[10px] md:pr-[10px] h-full inline-flex items-center"
                 ><button type="submit" title="Search">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +234,7 @@
               </span>
             </form>
           </div>
-          <div class="absolute md:relative top-[20px] md:top-0 right-0">
+          <div class="absolute md:relative top-[25px] md:top-0 right-0">
             <a href="#"
               ><span
                 ><img
@@ -232,6 +245,277 @@
         </div>
       </div>
     </header>
+
+    <!-- Navigation side section -->
+    <!-- backdrop -->
+    <div
+      x-data
+      x-show="$store.Menu.isVisible"
+      @click="$store.Menu.toggle()"
+      class="absolute top-0 left-0 w-full h-full z-30"
+    ></div>
+    <section
+      x-data
+      x-show="$store.Menu.isVisible"
+      x-transition.enter.scale.origin.top.left
+      x-transition.leave.scale.origin.top.left
+      class="absolute h-full bg-zinc-250 top-0 left-0 z-50 w-[90%] mr-auto"
+    >
+      <div class="px-[12px] pb-[20px] flex border-b border-zinc-300">
+        <div class="py-[20px] w-1/3 text-center">Menu</div>
+        <div class="py-[20px] w-1/3 text-center bg-zinc-300">Account</div>
+      </div>
+      <div>
+        <ul>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            women
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            men
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            kids
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            jewelry
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            Mother's day
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            homeware
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            irish food
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            irish gifts
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+          <li
+            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+          >
+            clearance
+            <span
+              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
+              @click="open=!open"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.3"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="flex flex-col py-7 px-[12px] w-full border-b border-dashed border-zinc-400"
+      >
+        <address class="pr-12">
+          <h5 class="uppercase font-mediumbold not-italic">the irish store</h5>
+          <p class="not-italic leading-6">
+            1st Floor<br />8-9 Westmoreland Street,<br />Dublin 2, Ireland
+          </p>
+        </address>
+        <div>
+          <p class="leading-6">
+            <span class="font-mediumbold uppercase">USA/CANADA: </span>
+            <a title="Call Us" href="tel:18007075037" class="hover:underline"
+              >1800 707 5037 (toll free to Ireland)</a
+            >
+          </p>
+          <p class="leading-6">
+            <span class="font-mediumbold uppercase">International: </span
+            ><a title="Call Us" href="tel:+35318611590" class="hover:underline"
+              >+353 1 8611590</a
+            >
+          </p>
+          <p class="leading-6">
+            <span class="font-mediumbold uppercase">head office: </span
+            ><a title="Call Us" href="tel:+35318611590" class="hover:underline"
+              >+353 1 822 8040</a
+            >
+          </p>
+          <p class="leading-6">
+            <span class="font-mediumbold uppercase">email: </span>
+            <a
+              title="Contact Us"
+              href="mailto:info@theirishstore.com"
+              class="hover:underline"
+              >info@theirishstore.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Navigation block -->
     <div class="hidden md:block bg-zinc-250">
@@ -248,6 +532,9 @@
           </li>
           <li class="nav-list-item">
             <a href="#">jewelry</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#">Mother's day</a>
           </li>
           <li class="nav-list-item">
             <a href="#">homeware</a>
@@ -268,7 +555,7 @@
     <!-- breadcrums -->
     <div>
       <ul
-        class="flex items-center mx-5 2xl:mx-auto max-w-[1280px] py-3 font-normal text-sm"
+        class="flex items-center mx-5 2xl:mx-auto max-w-[1280px] pt-4 pb-3 font-normal text-sm"
       >
         <li class="pr-2 capitalize cursor-pointer">home</li>
         <span
@@ -313,12 +600,14 @@
     <!-- main section -->
     <section class="mx-5 2xl:mx-auto max-w-[1280px]">
       <div>
-        <h2 class="capitalize text-[22px]">new women's clothing</h2>
+        <h2 class="capitalize text-[24px]">new women's clothing</h2>
       </div>
       <div class="flex flex-col-reverse md:flex-row">
-        <aside class="w-full md:w-[315px] text-[14px] capitalize md:pr-[2%]">
+        <aside
+          class="hidden sm:block w-full md:w-[315px] text-[14px] capitalize md:pr-[2%]"
+        >
           <h6 class="py-3 border-b border-zinc-300">shopping options</h6>
-          <div>
+          <div class="mb-[25px]">
             <ul>
               <li
                 class="relative py-[10px] border-b border-zinc-300"
@@ -469,7 +758,7 @@
                 </span>
                 <span
                   x-show="open"
-                  class="grid grid-cols-12 mg:grid-cols-4 gap-1 grid-flow-row pt-2 w-fit"
+                  class="grid grid-cols-12 md:grid-cols-4 gap-1 grid-flow-row pt-2 w-fit"
                 >
                   <div class="product-thumbnail w-9">
                     <img
@@ -784,7 +1073,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -797,7 +1086,7 @@
                   <h6 class="pb-1 pt-2 cursor-pointer hover:underline">
                     The Cushendall Cropped Aran Cardigan
                   </h6>
-                  <span class="py-1 text-zinc-750">$109.95</span>
+                  <span class="py-1">$109.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -826,7 +1115,7 @@
                   <img
                     src="./assets/products/save.png"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -839,7 +1128,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     Irish Wool Country Walking Cape - Navy
                   </h6>
-                  <span class="py-1 text-zinc-750"
+                  <span class="py-1"
                     >Was <span class="line-through pr-1">$479.95</span>
                     <span class="text-red-850">Now $350.95</span></span
                   >
@@ -857,7 +1146,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -870,7 +1159,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Leenane Aran Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750">$169.95</span>
+                  <span class="py-1">$169.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -899,7 +1188,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -912,7 +1201,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Banna Aran Cardigan
                   </h6>
-                  <span class="py-1 text-zinc-750">$119.95</span>
+                  <span class="py-1">$119.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -941,7 +1230,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -954,7 +1243,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     McConnell Fermoy Aran Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750">$239.95</span>
+                  <span class="py-1">$239.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -983,7 +1272,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -996,7 +1285,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Kerrykeel Aran Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750">$144.95</span>
+                  <span class="py-1">$144.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1025,7 +1314,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1038,7 +1327,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Dereen Aran Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750"
+                  <span class="py-1"
                     >Was <span class="line-through pr-1">$189.95</span>
                     <span class="text-red-850">Now $129.95</span></span
                   >
@@ -1076,7 +1365,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1089,7 +1378,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     McConnell Mizen Aran Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750">$239.95</span>
+                  <span class="py-1">$239.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1112,7 +1401,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1125,7 +1414,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Grafton Cable Cape
                   </h6>
-                  <span class="py-1 text-zinc-750">$129.95</span>
+                  <span class="py-1">$129.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1154,7 +1443,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1167,7 +1456,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Derrynane Diamond Aran Cardigan
                   </h6>
-                  <span class="py-1 text-zinc-750">$200.95</span>
+                  <span class="py-1">$200.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1196,7 +1485,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1209,7 +1498,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     Women's Plaid Flannel Shirt
                   </h6>
-                  <span class="py-1 text-zinc-750">$99.95</span>
+                  <span class="py-1">$99.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1250,7 +1539,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1263,7 +1552,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     Classic Irish Shirt
                   </h6>
-                  <span class="py-1 text-zinc-750">$49.95</span>
+                  <span class="py-1">$49.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1292,7 +1581,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1305,7 +1594,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     McConnell Bantry Poncho
                   </h6>
-                  <span class="py-1 text-zinc-750">$199.95</span>
+                  <span class="py-1">$199.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1334,7 +1623,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1347,7 +1636,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     McConnell Breton Stripe Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750">$229.95</span>
+                  <span class="py-1">$229.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1376,7 +1665,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1389,7 +1678,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Dungloe Donegal Tweed Cape
                   </h6>
-                  <span class="py-1 text-zinc-750">$299.95</span>
+                  <span class="py-1">$299.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1412,7 +1701,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1425,7 +1714,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Mc Connell Goleen Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750">$229.95</span>
+                  <span class="py-1">$229.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1454,7 +1743,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1467,7 +1756,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     McConnell Barleycove Aran Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750">$239.95</span>
+                  <span class="py-1">$239.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1496,7 +1785,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1509,7 +1798,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     McConnell Garnish Tweed Coat
                   </h6>
-                  <span class="py-1 text-zinc-750">$299.95</span>
+                  <span class="py-1">$299.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1532,7 +1821,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1545,7 +1834,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     Women's Cotton Flannel Nightshirt
                   </h6>
-                  <span class="py-1 text-zinc-750">$69.95</span>
+                  <span class="py-1">$69.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1574,7 +1863,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1587,7 +1876,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     Women's Tartan Flannel Lounge Pants
                   </h6>
-                  <span class="py-1 text-zinc-750">$49.95</span>
+                  <span class="py-1">$49.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1616,7 +1905,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1629,7 +1918,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     The Mullaghmore Aran Gilet
                   </h6>
-                  <span class="py-1 text-zinc-750"
+                  <span class="py-1"
                     >Was <span class="line-through pr-1">$119.95</span>
                     <span class="text-red-850">Now $85.95</span></span
                   >
@@ -1661,7 +1950,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1674,7 +1963,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     Mucros Irish Wool Half Zip Poncho
                   </h6>
-                  <span class="py-1 text-zinc-750">$229.95</span>
+                  <span class="py-1">$229.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1703,7 +1992,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1716,7 +2005,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     McConnell Shangarry Aran Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750"
+                  <span class="py-1"
                     >Was <span class="line-through pr-1">$239.95</span>
                     <span class="text-red-850">Now $169.95</span></span
                   >
@@ -1742,7 +2031,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="44px"
                   />
                 </div>
                 <div>
@@ -1755,7 +2044,7 @@
                   <h6 class="pt-2 pb-1 cursor-pointer hover:underline">
                     McConnell Shangarry Aran Sweater
                   </h6>
-                  <span class="py-1 text-zinc-750">$239.95</span>
+                  <span class="py-1">$239.95</span>
                   <div class="py-1 text-emerald-700 cursor-pointer">
                     reviews
                   </div>
@@ -1782,12 +2071,14 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="mt-[25px]">
       <!-- top section -->
-      <section class="bg-zinc-250 text-zinc-750">
+      <section class="bg-zinc-250">
         <div class="mx-5 2xl:mx-auto max-w-[1280px] pb-[25px]">
-          <!-- ships to info -->
-          <div class="flex items-center py-[25px]">
+          <!-- ships to -->
+          <div
+            class="flex justify-center md:justify-start items-center py-[30px] md:py-[25px]"
+          >
             <span class="uppercase text-[11px] font-bold tracking-widest"
               >ships to:</span
             ><span class="px-2"
@@ -1882,7 +2173,7 @@
           <!-- Subscribe form -->
           <div>
             <form action="" class="flex">
-              <div class="relative flex items-center bg-white">
+              <div class="relative flex items-center bg-white w-full md:w-fit">
                 <span class="px-2"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1901,7 +2192,7 @@
                 <input
                   type="email"
                   placeholder="ENTER EMAIL"
-                  class="text-[14px] p-[6px] font-medium placeholder:text-zinc-750 placeholder:tracking-wider w-[200px]"
+                  class="text-[14px] p-[6px] font-medium placeholder:text-zinc-750 placeholder:tracking-wider w-full md:w-[200px]"
                 />
               </div>
               <button
@@ -1921,9 +2212,9 @@
             class="flex flex-col justify-between lg:flex-wrap-reverse 2lg:flex-nowrap 2lg:flex-row"
           >
             <div
-              class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row 2lg:w-2/3"
+              class="w-full flex justify-center xsm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-dense gap-4 2lg:w-2/3"
             >
-              <div>
+              <div class="text-center xsm:text-left">
                 <h5 class="uppercase font-mediumbold mb-3">HOW CAN WE HELP?</h5>
                 <ul>
                   <li class="footer-list-item">Help Center</li>
@@ -1932,9 +2223,10 @@
                   <li class="footer-list-item">Free Returns</li>
                   <li class="footer-list-item">Delivery & Shipping</li>
                   <li class="footer-list-item">Tax Information</li>
+                  <li class="footer-list-item">Our story</li>
                 </ul>
               </div>
-              <div>
+              <div class="hidden xsm:block">
                 <h5 class="uppercase font-mediumbold mb-3">ABOUT US</h5>
                 <ul>
                   <li class="footer-list-item">Our Story</li>
@@ -1944,7 +2236,7 @@
                   <li class="footer-list-item">Terms & Conditions</li>
                 </ul>
               </div>
-              <div>
+              <div class="hidden xsm:block">
                 <h5 class="uppercase font-mediumbold mb-3">
                   USEFUL INFORMATION
                 </h5>
@@ -1954,7 +2246,7 @@
                   <li class="footer-list-item">Catalog</li>
                 </ul>
               </div>
-              <div>
+              <div class="hidden xsm:block">
                 <h5 class="uppercase font-mediumbold mb-3">POPULAR PRODUCTS</h5>
                 <ul>
                   <li class="footer-list-item">Aran Sweaters</li>
@@ -1968,39 +2260,39 @@
               </div>
             </div>
             <!-- Reviews container -->
-            <div class="min-w-[230px] max-w-[280px] mt-[30px]">
+            <div class="min-w-[230px] max-w-[280px] mt-[30px] mx-auto xsm:mx-0">
               <div class="flex pb-[12px]">
-                <div class="pr-2 h-[28px] cursor-pointer">
+                <div class="pr-3 h-[28px] cursor-pointer">
                   <img
                     src="./assets/social-media-icons/tis-icon-facebook.svg"
                     alt="facebook icon"
                   />
                 </div>
-                <div class="pr-2 h-[28px] cursor-pointer">
+                <div class="pr-3 h-[28px] cursor-pointer">
                   <img
                     src="./assets/social-media-icons/tis-icon-pinterest.svg"
                     alt="Pinterest icon"
                   />
                 </div>
-                <div class="pr-2 h-[28px] cursor-pointer">
+                <div class="pr-3 h-[28px] cursor-pointer">
                   <img
                     src="./assets/social-media-icons/tis-icon-linkedin.svg"
                     alt="Linkedin icon"
                   />
                 </div>
-                <div class="pr-2 h-[28px] cursor-pointer">
+                <div class="pr-3 h-[28px] cursor-pointer">
                   <img
                     src="./assets/social-media-icons/tis-icon-youtube.svg"
                     alt="Youtube icon"
                   />
                 </div>
-                <div class="pr-2 h-[28px] cursor-pointer">
+                <div class="pr-3 h-[28px] cursor-pointer">
                   <img
                     src="./assets/social-media-icons/tis-icon-instagram.svg"
                     alt="Instagram icon"
                   />
                 </div>
-                <div class="pr-2 h-[28px] cursor-pointer">
+                <div class="pr-3 h-[28px] cursor-pointer">
                   <img
                     src="./assets/social-media-icons/tis-icon-blog.svg"
                     alt="Blog icon"
@@ -2019,11 +2311,11 @@
         </div>
       </section>
       <!-- bottom section -->
-      <section class="text-white bg-zinc-750 mb-11">
+      <section class="text-white bg-zinc-750 mb-14">
         <div
           class="mx-5 2xl:mx-auto max-w-[1280px] flex justify-between flex-wrap text-[14px]"
         >
-          <div class="flex py-7">
+          <div class="flex flex-col xsm:flex-row py-7 w-full lg:w-fit">
             <address class="pr-12">
               <h5 class="uppercase font-mediumbold not-italic">
                 the irish store
@@ -2032,7 +2324,7 @@
                 1st Floor<br />8-9 Westmoreland Street,<br />Dublin 2, Ireland
               </p>
             </address>
-            <div class="max-w-[300px]">
+            <div class="md:max-w-[300px]">
               <p class="leading-6">
                 <span class="font-mediumbold uppercase">USA/CANADA: </span>
                 <a
@@ -2062,7 +2354,7 @@
               </p>
             </div>
           </div>
-          <div class="py-7">
+          <div class="pt-2 pb-7 xsm:py-7">
             <div class="flex items-center py-1">
               <span class="font-mediumbold uppercase tracking-widest pt-1 pr-3"
                 >100% SECURE SHOPPING CART

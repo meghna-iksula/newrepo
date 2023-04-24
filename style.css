@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -24,6 +24,6 @@
     @apply w-[32px] mr-[5px] p-[1px] hover:ring-2 ring-zinc-750 cursor-pointer;
   }
   .footer-list-item {
-    @apply leading-6 text-[14px] hover:underline cursor-pointer;
+    @apply leading-6 text-[14px] capitalize hover:underline cursor-pointer;
   }
 }

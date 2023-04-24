@@ -35,7 +35,7 @@ export default {
         },
       },
       fontFamily: {
-        roboto: ["Noto Sans JP", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },
