@@ -256,10 +256,8 @@
     ></div>
     <section
       x-data
-      x-show="$store.Menu.isVisible"
-      x-transition.enter.scale.origin.top.left
-      x-transition.leave.scale.origin.top.left
-      class="absolute h-full bg-zinc-250 top-0 left-0 z-50 w-[90%] mr-auto"
+      :class="$store.Menu.isVisible? 'left-0': '-left-[100%]'"
+      class="absolute h-full bg-zinc-250 top-0 z-50 w-[90%] mr-auto transition-all duration-500"
     >
       <div class="px-[12px] pb-[20px] flex border-b border-zinc-300">
         <div class="py-[20px] w-1/3 text-center">Menu</div>
@@ -268,7 +266,7 @@
       <div>
         <ul>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             women
             <span
@@ -291,7 +289,7 @@
             </span>
           </li>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             men
             <span
@@ -314,7 +312,7 @@
             </span>
           </li>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             kids
             <span
@@ -337,7 +335,7 @@
             </span>
           </li>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             jewelry
             <span
@@ -360,30 +358,12 @@
             </span>
           </li>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             Mother's day
-            <span
-              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
-              @click="open=!open"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2.3"
-                stroke="currentColor"
-                class="w-5 h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </span>
           </li>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             homeware
             <span
@@ -406,30 +386,12 @@
             </span>
           </li>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             irish food
-            <span
-              class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
-              @click="open=!open"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2.3"
-                stroke="currentColor"
-                class="w-5 h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </span>
           </li>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             irish gifts
             <span
@@ -452,7 +414,7 @@
             </span>
           </li>
           <li
-            class="relative py-[10px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
+            class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             clearance
             <span
