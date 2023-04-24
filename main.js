@@ -6,7 +6,7 @@ Alpine.store("Menu", {
   shoppingOptionsIsVisible: false,
 
   toggleNav() {
-    this.isVisible = !this.isVisible;
+    this.navIsVisible = !this.navIsVisible;
   },
   toggleShoppingOptions() {
     this.shoppingOptionsIsVisible = !this.shoppingOptionsIsVisible;
