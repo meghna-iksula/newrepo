@@ -183,13 +183,13 @@
         class="relative flex flex-col items-center justify-center mx-5 2xl:mx-auto max-w-[1280px]"
       >
         <!-- Menu button -->
-        <span
+        <div
           x-data
           class="absolute md:hidden left-0 top-[25px] text-white text-[13px] ring-2 ring-white p-0.5"
           @click="$store.Menu.toggleNav()"
         >
           MENU
-        </span>
+        </div>
         <!-- Main Logo -->
         <div class="py-[20px] md:py-0">
           <a class="logo" href="#" title="The Irish Store">
@@ -270,10 +270,11 @@
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             women
-            <span
+            <div
               class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
               @click="open=!open"
-              ><svg
+            >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -287,16 +288,17 @@
                   d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                 />
               </svg>
-            </span>
+            </div>
           </li>
           <li
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             men
-            <span
+            <div
               class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
               @click="open=!open"
-              ><svg
+            >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -310,16 +312,17 @@
                   d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                 />
               </svg>
-            </span>
+            </div>
           </li>
           <li
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             kids
-            <span
+            <div
               class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
               @click="open=!open"
-              ><svg
+            >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -333,16 +336,17 @@
                   d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                 />
               </svg>
-            </span>
+            </div>
           </li>
           <li
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             jewelry
-            <span
+            <div
               class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
               @click="open=!open"
-              ><svg
+            >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -356,7 +360,7 @@
                   d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                 />
               </svg>
-            </span>
+            </div>
           </li>
           <li
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
@@ -367,10 +371,11 @@
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             homeware
-            <span
+            <div
               class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
               @click="open=!open"
-              ><svg
+            >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -384,7 +389,7 @@
                   d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                 />
               </svg>
-            </span>
+            </div>
           </li>
           <li
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
@@ -395,10 +400,11 @@
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             irish gifts
-            <span
+            <div
               class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
               @click="open=!open"
-              ><svg
+            >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -412,16 +418,17 @@
                   d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                 />
               </svg>
-            </span>
+            </div>
           </li>
           <li
             class="relative py-[12px] pl-[12px] uppercase text-[14px] font-medium border-b border-zinc-300 tracking-wider"
           >
             clearance
-            <span
+            <div
               class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
               @click="open=!open"
-              ><svg
+            >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -435,7 +442,7 @@
                   d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                 />
               </svg>
-            </span>
+            </div>
           </li>
         </ul>
       </div>
@@ -521,8 +528,8 @@
         class="flex items-center mx-5 2xl:mx-auto max-w-[1280px] pt-4 pb-3 font-normal text-sm"
       >
         <li class="pr-2 capitalize cursor-pointer">home</li>
-        <span
-          ><svg
+        <div>
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -536,10 +543,10 @@
               d="M8.25 4.5l7.5 7.5-7.5 7.5"
             />
           </svg>
-        </span>
+        </div>
         <li class="px-2 capitalize cursor-pointer">new arrivals</li>
-        <span
-          ><svg
+        <div>
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -553,7 +560,7 @@
               d="M8.25 4.5l7.5 7.5-7.5 7.5"
             />
           </svg>
-        </span>
+        </div>
         <li class="px-2 capitalize text-zinc-350 cursor-pointer">
           new women's clothing
         </li>
@@ -571,11 +578,11 @@
           class="fixed sm:relative sm:left-0 top-0 z-50 w-[80%] h-full bg-white transition-all duration-500 sm:w-full md:w-[315px] text-[14px] capitalize md:pr-[2%]"
           :class="$store.Menu.shoppingOptionsIsVisible? 'left-0': '-left-[100%]'"
         >
-          <h6
+          <div
             class="relative text-[20px] font-normal sm:font-medium sm:text-[15px] pl-3 sm:pl-0 py-3 sm:pt-1 sm:pb-3 border-b border-zinc-300 shadow-sm shadow-zinc-400 sm:shadow-none leading-6"
           >
             shopping options
-            <span
+            <div
               @click="$store.Menu.toggleShoppingOptions()"
               class="sm:hidden absolute inline-flex justify-end right-2 pt-[3px] w-full cursor-pointer"
             >
@@ -593,26 +600,27 @@
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
-            </span>
-          </h6>
+            </div>
+          </div>
           <div class="mb-[25px]">
             <ul>
               <li
-                class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300"
+                class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300 cursor-pointer"
                 x-data="{open:false}"
+                @click="open=!open"
               >
                 price
-                <span
-                  class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
-                  @click="open=!open"
-                  ><svg
+                <div
+                  class="absolute inline-flex justify-end right-3 pt-[3px] w-fit"
+                  :class="open && 'rotate-180'"
+                >
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
-                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -620,7 +628,7 @@
                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                     />
                   </svg>
-                </span>
+                </div>
                 <span x-show="open">
                   <ul class="pt-1 text-zinc-700">
                     <li class="py-1 hover:bg-zinc-250">
@@ -683,21 +691,22 @@
                 </span>
               </li>
               <li
-                class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300"
+                class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300 cursor-pointer"
                 x-data="{open:false}"
+                @click="open=!open"
               >
                 size
-                <span
-                  class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
-                  @click="open=!open"
-                  ><svg
+                <div
+                  class="absolute inline-flex justify-end right-3 pt-[3px] w-fit"
+                  :class="open && 'rotate-180'"
+                >
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
-                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -705,7 +714,7 @@
                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                     />
                   </svg>
-                </span>
+                </div>
                 <span x-show="open" class="flex flex-wrap pt-2">
                   <div class="size-unit">One Size Only</div>
                   <div class="size-unit">XS</div>
@@ -721,21 +730,22 @@
               </li>
 
               <li
-                class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300"
+                class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300 cursor-pointer"
                 x-data="{open:false}"
+                @click="open=!open"
               >
                 color
-                <span
-                  class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
-                  @click="open=!open"
-                  ><svg
+                <div
+                  class="absolute inline-flex justify-end right-3 pt-[3px] w-fit"
+                  :class="open && 'rotate-180'"
+                >
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
-                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -743,7 +753,7 @@
                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                     />
                   </svg>
-                </span>
+                </div>
                 <span
                   x-show="open"
                   class="flex flex-wrap md:grid grid-cols-4 gap-1 grid-flow-row pt-2 w-fit"
@@ -968,21 +978,22 @@
                 </span>
               </li>
               <li
-                class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300"
+                class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300 cursor-pointer"
                 x-data="{open:false}"
+                @click="open=!open"
               >
                 gender
-                <span
-                  class="absolute inline-flex justify-end right-3 pt-[3px] w-full cursor-pointer"
-                  @click="open=!open"
-                  ><svg
+                <div
+                  class="absolute inline-flex justify-end right-3 pt-[3px] w-fit"
+                  :class="open && 'rotate-180'"
+                >
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
                     class="w-4 h-4"
-                    :class="open && 'rotate-180'"
                   >
                     <path
                       stroke-linecap="round"
@@ -990,7 +1001,7 @@
                       d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                     />
                   </svg>
-                </span>
+                </div>
                 <span x-show="open">
                   <ul class="pt-1 text-zinc-700">
                     <li class="py-1 hover:bg-zinc-250">
@@ -1136,7 +1147,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1178,7 +1189,7 @@
                   <img
                     src="./assets/products/save.png"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1209,7 +1220,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1251,7 +1262,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1293,7 +1304,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1335,7 +1346,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1377,7 +1388,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1428,7 +1439,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1464,7 +1475,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1506,7 +1517,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1548,7 +1559,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1602,7 +1613,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1644,7 +1655,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1686,7 +1697,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1728,7 +1739,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1764,7 +1775,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1806,7 +1817,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1848,7 +1859,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1884,7 +1895,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1926,7 +1937,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -1968,7 +1979,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -2013,7 +2024,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -2055,7 +2066,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -2094,7 +2105,7 @@
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
-                    width="64px"
+                    width="64"
                   />
                 </div>
                 <div>
@@ -2426,12 +2437,8 @@
               </span>
               <img src="./assets/comodo-source.webp" alt="comodo source" />
             </div>
-            <div class="py-2">
-              <img
-                src="./assets/payment-options.webp"
-                alt="Payments options"
-                width="400px"
-              />
+            <div class="py-2 sm:w-[400px]">
+              <img src="./assets/payment-options.webp" alt="Payments options" />
             </div>
           </div>
         </div>
