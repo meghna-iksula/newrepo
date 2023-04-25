@@ -450,7 +450,7 @@
         class="flex flex-col py-7 px-[12px] w-full border-b border-dashed border-zinc-400"
       >
         <address class="pr-12">
-          <h5 class="uppercase font-mediumbold not-italic">the irish store</h5>
+          <p class="uppercase font-mediumbold not-italic">the irish store</p>
           <p class="not-italic leading-6">
             1st Floor<br />8-9 Westmoreland Street,<br />Dublin 2, Ireland
           </p>
@@ -512,7 +512,7 @@
           <li class="nav-list-item">
             <a href="#">irish food</a>
           </li>
-          <li class="nav-list-item">
+          <li class="nav-list-item border-b-[3px] border-zinc-750">
             <a href="#">irish gifts</a>
           </li>
           <li class="nav-list-item">
@@ -524,10 +524,10 @@
 
     <!-- breadcrums -->
     <div class="hidden md:block">
-      <ul
+      <div
         class="flex items-center mx-5 2xl:mx-auto max-w-[1280px] pt-4 pb-3 font-normal text-sm"
       >
-        <li class="pr-2 capitalize cursor-pointer">home</li>
+        <div class="pr-2 capitalize cursor-pointer">home</div>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -544,7 +544,7 @@
             />
           </svg>
         </div>
-        <li class="px-2 capitalize cursor-pointer">new arrivals</li>
+        <div class="px-2 capitalize cursor-pointer">new arrivals</div>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -561,10 +561,10 @@
             />
           </svg>
         </div>
-        <li class="px-2 capitalize text-zinc-350 cursor-pointer">
+        <div class="px-2 capitalize text-zinc-350 cursor-pointer">
           new women's clothing
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 
     <!-- main section -->
@@ -603,8 +603,8 @@
             </div>
           </div>
           <div class="mb-[25px]">
-            <ul>
-              <li
+            <div>
+              <div
                 class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300 cursor-pointer"
                 x-data="{open:false}"
                 @click="open=!open"
@@ -629,7 +629,7 @@
                     />
                   </svg>
                 </div>
-                <span x-show="open">
+                <div x-show="open">
                   <ul class="pt-1 text-zinc-700">
                     <li class="py-1 hover:bg-zinc-250">
                       <input
@@ -688,9 +688,9 @@
                       <label for="price-range7">$300.00 and above</label>
                     </li>
                   </ul>
-                </span>
-              </li>
-              <li
+                </div>
+              </div>
+              <div
                 class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300 cursor-pointer"
                 x-data="{open:false}"
                 @click="open=!open"
@@ -715,7 +715,7 @@
                     />
                   </svg>
                 </div>
-                <span x-show="open" class="flex flex-wrap pt-2">
+                <div x-show="open" class="flex flex-wrap pt-2">
                   <div class="size-unit">One Size Only</div>
                   <div class="size-unit">XS</div>
                   <div class="size-unit">S</div>
@@ -726,10 +726,10 @@
                   <div class="size-unit">XL</div>
                   <div class="size-unit">XXL</div>
                   <div class="size-unit">XXXL</div>
-                </span>
-              </li>
+                </div>
+              </div>
 
-              <li
+              <div
                 class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300 cursor-pointer"
                 x-data="{open:false}"
                 @click="open=!open"
@@ -754,7 +754,7 @@
                     />
                   </svg>
                 </div>
-                <span
+                <div
                   x-show="open"
                   class="flex flex-wrap md:grid grid-cols-4 gap-1 grid-flow-row pt-2 w-fit"
                 >
@@ -975,9 +975,9 @@
                       class="w-full h-6"
                     />
                   </div>
-                </span>
-              </li>
-              <li
+                </div>
+              </div>
+              <div
                 class="relative py-[10px] pl-3 sm:pl-0 border-b border-zinc-300 cursor-pointer"
                 x-data="{open:false}"
                 @click="open=!open"
@@ -1002,7 +1002,7 @@
                     />
                   </svg>
                 </div>
-                <span x-show="open">
+                <div x-show="open">
                   <ul class="pt-1 text-zinc-700">
                     <li class="py-1 hover:bg-zinc-250">
                       <input
@@ -1029,9 +1029,9 @@
                       <label for="gender1">Unisex</label>
                     </li>
                   </ul>
-                </span>
-              </li>
-            </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </aside>
         <section class="w-full pb-[40px] md:pl-[2%]">
@@ -1143,7 +1143,7 @@
             <!-- Product item 1-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1185,7 +1185,7 @@
             <!-- Product item 2-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/save.png"
                     alt="new product"
@@ -1216,7 +1216,7 @@
             <!-- Product item 3-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1258,7 +1258,7 @@
             <!-- Product item 4-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1300,7 +1300,7 @@
             <!-- Product item 5-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1342,7 +1342,7 @@
             <!-- Product item 6-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1384,7 +1384,7 @@
             <!-- Product item 7-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1435,7 +1435,7 @@
             <!-- Product item 8-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1471,7 +1471,7 @@
             <!-- Product item 9-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1513,7 +1513,7 @@
             <!-- Product item 10-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1555,7 +1555,7 @@
             <!-- Product item 11-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1609,7 +1609,7 @@
             <!-- Product item 12-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1651,7 +1651,7 @@
             <!-- Product item 13-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1693,7 +1693,7 @@
             <!-- Product item 14-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1735,7 +1735,7 @@
             <!-- Product item 15-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1771,7 +1771,7 @@
             <!-- Product item 16-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1813,7 +1813,7 @@
             <!-- Product item 17-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1855,7 +1855,7 @@
             <!-- Product item 18-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1891,7 +1891,7 @@
             <!-- Product item 19-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1933,7 +1933,7 @@
             <!-- Product item 20-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -1975,7 +1975,7 @@
             <!-- Product item 21-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -2020,7 +2020,7 @@
             <!-- Product item 22-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -2062,7 +2062,7 @@
             <!-- Product item 23-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -2101,7 +2101,7 @@
             <!-- Product item 24-->
             <div class="product-item">
               <div class="relative cursor-pointer scale-95">
-                <div class="absolute top-5 right-3">
+                <div class="absolute top-[10px] right-[10px]">
                   <img
                     src="./assets/products/new.webp"
                     alt="new product"
@@ -2246,7 +2246,7 @@
           </div>
           <!-- Subscribe form -->
           <div>
-            <form action="" class="flex">
+            <form class="flex">
               <div class="relative flex items-center bg-white w-full md:w-fit">
                 <span class="px-2"
                   ><svg
@@ -2393,9 +2393,9 @@
         >
           <div class="flex flex-col xsm:flex-row py-7 w-full lg:w-fit">
             <address class="pr-12">
-              <h5 class="uppercase font-mediumbold not-italic">
+              <p class="uppercase font-mediumbold not-italic">
                 the irish store
-              </h5>
+              </p>
               <p class="not-italic leading-6">
                 1st Floor<br />8-9 Westmoreland Street,<br />Dublin 2, Ireland
               </p>
